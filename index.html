@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="si">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17365d">
+  <meta name="description" content="මාපා - කලාපීය ගුරු තොරතුරු පද්ධතිය">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <title>ZTIMS - මාපා</title>
+  <style>
+    :root { color-scheme: light; --navy:#17365d; --bg:#f2f6fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:22px;
+      font-family:Arial,"Noto Sans Sinhala",sans-serif; background:var(--bg); color:#18324f; }
+    main { width:min(100%,480px); background:#fff; border:1px solid #d7e1ef; border-radius:20px;
+      padding:30px 24px; box-shadow:0 12px 35px #17365d14; text-align:center; }
+    .mark { width:76px;height:76px;margin:0 auto 18px;border-radius:20px;background:var(--navy);
+      color:#fff;display:grid;place-items:center;font-size:27px;font-weight:700; }
+    h1 { font-size:23px; margin:0 0 8px; color:var(--navy); }
+    p { line-height:1.7; color:#60738c; font-size:14px; }
+    a,button { display:block;width:100%;border:0;border-radius:11px;padding:15px 18px;
+      background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:16px;cursor:pointer; }
+    .note { font-size:12px;margin-top:18px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">මාපා</div>
+    <h1>කලාපීය ගුරු තොරතුරු පද්ධතිය</h1>
+    <p>ZTIMS App එකට පිවිසෙන්න. ඔබගේ දැනට තිබෙන Google Apps Script Login සහ Database එකම භාවිත වේ.</p>
+    <a href="https://script.google.com/macros/s/AKfycbxIp0Hbe5ZFRi9CTAmVHtJqTwSOBK1P41zGk7ujZVIGtNAKhLDwUdj8-D5j6ho8CwYY/exec" rel="noopener">ZTIMS Open කරන්න</a>
+    <p class="note">Internet සම්බන්ධතාව අවශ්‍යයි. මෙම App එක දත්ත Offline ලෙස ගබඩා නොකරයි.</p>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+    }
+  </script>
+</body>
+</html>
